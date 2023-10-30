@@ -3,9 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
+import { testComponent } from './test/test.component';
+import { CustomerSignupComponent } from './customer-signup/customer-signup.component'; 
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    testComponent,
+    CustomerSignupComponent
   ],
   imports: [
     BrowserModule

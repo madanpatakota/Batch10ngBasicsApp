@@ -1,0 +1,42 @@
+ -----------------------------------------------------Think and Do---------------------------------------------------------
+ 
+1. file Name 
+
+
+   component 
+   directive
+   pipe
+   service
+   router .... etc
+
+
+    <filename>.<featurename>.ts
+
+
+
+    1. i am creating the component ( html + style + businesslogic)
+       
+      a. YOu have to focus which name i have to give for that component
+      b. Which template i have to use (what kind of html tags i have to use)
+      c. What kind of styles i have to apply(Styles)
+
+
+
+    2. so that i have to  register the compoenent in the app.module.ts(register)
+
+
+    3. and then only i can use that component in my application where i want
+
+
+
+    2. I am creating the componnet
+
+
+
+
+How we can create the component through the termainal window?
+With the help of the angular cli
+
+ng g c <compnentnname>
+
+   
