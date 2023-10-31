@@ -6,7 +6,41 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Batch10ngBasicsApp';
+
+  /*string interpolation*/
+    ProjectName = "Angular";
+    title       = "Basics App";
+
+    getCustomerName(){
+       return "Robert.Jr";
+    }
+
+
+    /*Property Data Binding*/
+    CustomerRole = "Admin";
+    inputType    = "checkbox";
+    disabled     = true;
+
+
+
+    /*event Data Binding*/
+    /*how to capture the key board events*/
+    captureData($eventDetails:KeyboardEvent){
+       //console.log("Keypress event fired");
+       //console.log($eventDetails);
+       //console.log($eventDetails.target);
+
+      var htmlInputEl = $eventDetails.target as HTMLInputElement; 
+      console.log(htmlInputEl.value);
+    }
+
+    btnClick(){
+       console.log("Button fired");
+       window.alert("Message is".concat(this.ProjectName));
+    }
+
+
+
 }
 
 
