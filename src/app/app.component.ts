@@ -36,9 +36,35 @@ export class AppComponent {
 
     btnClick(){
        console.log("Button fired");
-       window.alert("Message is".concat(this.ProjectName));
+      //  window.alert("Message is".concat(this.ProjectName));
     }
 
+    /*  Handling the Event Data binding and Property Data binding together in same element */
+    cusPeterLocation = "London";
+
+    evtCusLocationKeyUp($eventDetails:KeyboardEvent){
+     var htmlInputEl = $eventDetails.target as HTMLInputElement; 
+     console.log(htmlInputEl.value);
+
+     this.cusPeterLocation = htmlInputEl.value;
+
+   }
+
+
+   cusJohnLocation = "New yark";
+
+   evtCusLocationModelChange($event:string){
+    
+       //parseInt($event)
+
+       /*Trying to update the Customer Location By ngModel*/
+       this.cusJohnLocation = $event;
+   }
+
+
+
+   
+    /*Two Way Databinding  = propertydatabidning + event databinding*/
 
 
 }

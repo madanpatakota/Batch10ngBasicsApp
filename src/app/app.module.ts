@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 import { testComponent } from './test/test.component';
 import { CustomerSignupComponent } from './customer-signup/customer-signup.component'; 
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CustomerSignupComponent } from './customer-signup/customer-signup.compo
     CustomerSignupComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -39,4 +39,15 @@ With the help of the angular cli
 
 ng g c <compnentnname>
 
+
+
+=====================================================
+
+Second class
+
+1. Create component
+2. Register commponent
+
+
+3. Declare component
    
