@@ -1,3 +1,112 @@
-<p>customer-signup works!</p>
+<!-- Just for remind for practice on bootstrap-->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-10">
+      <div class="card h-100">
+        <div class="card-header bg-primary text-white">
+          Customer Registration Page
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="mb-3 row">
+              <label for="name" class="col-sm-3 col-form-label">Name</label>
+              <div class="col-sm-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your name"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="email" class="col-sm-3 col-form-label">Email</label>
+              <div class="col-sm-9">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="password" class="col-sm-3 col-form-label"
+                >Password</label
+              >
+              <div class="col-sm-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter your Password"
+                />
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="message" class="col-sm-3 col-form-label"
+                >Message</label
+              >
+              <div class="col-sm-9">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Enter your personal details"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-9 offset-sm-3">
+                <button type="submit" class="btn btn-primary btn-block">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<button>Click</button>
+<hr class="my-4" />
+
+<div class="container mt-5">
+  <div class="row">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item p-4 border-bottom border-info">
+        <div class="row">
+          <h3 class="d-inline-flex">ngStyle Directive</h3>
+          <span> (We use for change the style based on the condition) </span>
+        </div>
+        <div class="row mt-4">
+          <div class="col-4">
+            <span>Zone Type(Propery Data binding)</span>
+          </div>
+          <!-- HTML element with background color
+          <div class="col-3" style="background-color: green"></div> -->
+          <div class="col-3"
+           [ngStyle]="{'background-color':divColor}">
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-4">
+            <span>Zone Type(Propery Data binding by condition</span>
+          </div>
+          <!-- HTML element with background color
+          <div class="col-3" style="background-color: green"></div> -->
+          <!-- [ngStyle]="{background-color: zoneSafeStatus   == true   ?  greenColor        : redColor, 
+                 ,
+            width           : zonemaxWidth     == true   ?  '10px'            : ''    }" -->
+          <div class="col-3"
+            [ngStyle]="{'background-color': zoneSafeStatus   == true   ?  greenColor        : redColor ,
+                        'border'          : zoneBorderStatus == true   ? '5px solid yellow' : '' , 
+                        'width'           : zonemaxWidth     == true   ?  '10px'            : '' }">
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

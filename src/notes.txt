@@ -51,3 +51,18 @@ Second class
 
 3. Declare component
    
+
+
+
+Directive :
+1 . Set of instructions
+
+
+
+
+Normal HTML :
+style ---> we can set the style(backgroundcolor : yellow);
+
+[ngStyle] ---> we can set the style(backgroundcolor : yellow) but i want to execute based on some condition | instruction | suggestion ;
+
+

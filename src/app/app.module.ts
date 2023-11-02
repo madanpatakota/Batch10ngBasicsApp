@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { testComponent } from './test/test.component';
 import { CustomerSignupComponent } from './customer-signup/customer-signup.component'; 
 import { FormsModule } from '@angular/forms';
+import { BasicsComponent } from './basics/basics.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     testComponent,
-    CustomerSignupComponent
+    CustomerSignupComponent,
+    BasicsComponent
   ],
   imports: [
     BrowserModule,
