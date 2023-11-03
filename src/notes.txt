@@ -66,3 +66,19 @@ style ---> we can set the style(backgroundcolor : yellow);
 [ngStyle] ---> we can set the style(backgroundcolor : yellow) but i want to execute based on some condition | instruction | suggestion ;
 
 
+====================================================================================================================================
+
+style , class , 
+
+if else switch for 
+
+
+//JS
+
+status = true
+if(status){
+
+}
+else{
+
+}

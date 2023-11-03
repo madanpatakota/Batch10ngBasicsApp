@@ -1,4 +1,6 @@
 <!-- Just for remind for practice on bootstrap-->
+<div style="margin-bottom: 50em">
+
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-10">
@@ -75,6 +77,8 @@
 <div class="container mt-5">
   <div class="row">
     <ul class="list-group list-group-flush">
+
+      <!-- ngStyle -->
       <li class="list-group-item p-4 border-bottom border-info">
         <div class="row">
           <h3 class="d-inline-flex">ngStyle Directive</h3>
@@ -107,6 +111,67 @@
           </div>
         </div>
       </li>
+
+       <!-- ngClass-->
+      <li class="list-group-item p-4 border-bottom border-info">
+        <div class="row">
+          <h3 class="d-inline-flex">ngClass Directive</h3>
+          <span> (We use for change the class based on the condition) </span>
+        </div>
+        <div class="row mt-4">
+          <div class="col-4">
+            <span>Employee Type Status(Propery Data binding)</span>
+          </div>
+          <!-- <div class="col-3 badEmployee">Bad Employee</div> -->
+          <div class="col-3" [ngClass]="'badEmployee'" >Bad Employee</div>
+          <!-- <div class="col-3 goodEmployee">Good Employee</div> -->
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-4">
+            <span>Employee Type Status(Propery Data binding)</span>
+          </div>
+          <div class="col-3"
+           [ngClass]="employeeStatus == true ? 'goodEmployee' : 'badEmployee'"></div>
+        </div>
+      </li>
+
+
+       <!-- ngIf  : we can show or remove the content-->
+       <li class="list-group-item p-4 border-bottom border-info">
+        <div class="row">
+          <h3 class="d-inline-flex">ngIf Directive(Structural)</h3>
+          <span> (Display Web content based on the Condition) </span>
+        </div>
+        <div class="row mt-4">
+          <p *ngIf="customerEligibility"> Secret Key : 1!@Yumf!*89 </p>
+        </div>
+      </li>
+
+
+      <!-- local Ref Variables (#) -->
+      <!--how to refer the webcontent through the local ref-->
+      <!-- var question = "hey how are you?" -->
+      <li class="list-group-item p-4 border-bottom border-info">
+        <div class="row">
+          <h3 class="d-inline-flex">Local Ref element</h3>
+          <span> how to refer the webcontent  </span>
+        </div>
+        <div class="row mt-4">
+          <div class="col-2">
+               <p class="text-danger" #question>Hey !! How are you doing?</p>
+          </div>
+          <div class="col-1">
+            <button type="button" class="btn btn-primary"
+            
+             (click)="btnClick(question)" >Click</button>
+          </div>
+          <div class="col-2">
+            <p class="text-success" #question>{{myAnswer}}</p>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
+</div>
 </div>

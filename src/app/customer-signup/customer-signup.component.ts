@@ -30,6 +30,24 @@ export class CustomerSignupComponent {
   redColor   = 'red';
 
 
+    /*ngClass */
+    employeeStatus = true;
+
+
+  /*ngIf */
+  customerEligibility = false;
+
+
+   /* Local reference */
+  myAnswer = '';
+  btnClick(question:HTMLParagraphElement){
+      console.log(question);
+      // <p class="text-danger">Hey !! How are you doing?</p>
+      if(question.innerText == "Hey !! How are you doing?"){
+         this.myAnswer  = "Yeah!!! i am Excellent....."
+      }
+
+  }
 
 
 
