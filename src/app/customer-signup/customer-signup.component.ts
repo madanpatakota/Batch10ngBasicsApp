@@ -35,7 +35,7 @@ export class CustomerSignupComponent {
 
 
   /*ngIf */
-  customerEligibility = false;
+  customerEligibility = true;
 
 
    /* Local reference */
@@ -50,5 +50,26 @@ export class CustomerSignupComponent {
   }
 
 
+    /*   *ngFor   */
+    customerExperience = [
+      'He Likes the Non Veg Food',
+      'He dislike in Reception the way they talk in Restaurent',
+      'He went with his 4 freinds'
+    ];
+
+    //                 0           1
+    //var names = [{_:__} , {__:___}]
+
+
+    customersList = [
+      { name: 'John Smith', location: 'London', Job: 'Sales Rep' },
+      { name: 'Robert Frost', location: 'New yark', Job: 'Hotel Chef' },
+      { name: 'Peter moore', location: 'Colombo', Job: 'Car Driver' },
+    ];
+
+
+
+    /*ngSwitch and ngSwitchCase*/
+    customerID = 2;
 
 }
