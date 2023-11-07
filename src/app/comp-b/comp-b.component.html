@@ -1,0 +1,83 @@
+<!-- View child
+child of the View
+1 .  Can i access directly  element referecen into ts file.
+-->
+<div style="width: 200em" class="container mt-5">
+  <div class="row">
+    <ul class="list-group list-group-flush">
+      <!--View Child-->
+      <li class="list-group-item p-4 border-bottom border-info">
+        <div class="row">
+          <h3 class="d-inline-flex">ViewChild</h3>
+          <span>
+            Gives the Element of View Reference in the typescript file with the
+            help of referece name
+          </span>
+        </div>
+        <div class="row mt-4">
+          <div class="col-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="CustomerName"
+              #CustomerName
+            />
+          </div>
+
+          <!-- <div class="col-2">
+            <button class="btn btn-primary" (click)="btnClick(CustomerName)">Click</button>
+
+          </div> -->
+
+          <div class="col-2">
+            <button class="btn btn-success" (click)="btnVClick()">Click</button>
+          </div>
+
+          <div class="col-2">
+            You have entered :
+            <p class="text-success">{{ displayName }}</p>
+          </div>
+        </div>
+      </li>
+
+      <!--ContentChild-->
+      <!-- <ngContent></ngContent> -->
+      <li class="list-group-item p-4 border-bottom border-info">
+        <div class="row" #compBConent>
+          <h3 class="d-inline-flex">ContentChild</h3>
+          <span>
+            Gives the Element of Content Reference in the typescript file with
+            the help of referece name
+          </span>
+        </div>
+        <div class="row mt-4">
+          <div class="col-4">
+            <!-- Executes the content of the component-->
+            <!-- <ng-content></ng-content> -->
+            <!-- <ng-content select=".JobTitle"></ng-content> -->
+            <!-- <ng-content select="#CustomerLocation"></ng-content> -->
+
+            <!-- print the elements -->
+            <div class="mt-2">
+              <ng-content select="[CustomerLocation]"> </ng-content>
+            </div>
+
+            <div class="mt-2">
+              <ng-content select="[JobTitle]"> </ng-content>
+            </div>
+          </div>
+
+          <div class="col-2">
+            <button class="btn btn-success" (click)="btnCClick()">Click</button>
+          </div>
+
+          <div class="col-2">
+            You have entered :
+            <span class="text-success">{{ displayCName }}</span> |
+            <span class="text-success">{{ displayCJOB }}</span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

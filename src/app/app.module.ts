@@ -7,6 +7,8 @@ import { testComponent } from './test/test.component';
 import { CustomerSignupComponent } from './customer-signup/customer-signup.component'; 
 import { FormsModule } from '@angular/forms';
 import { BasicsComponent } from './basics/basics.component';
+import { CompAComponent } from './comp-a/comp-a.component';
+import { CompBComponent } from './comp-b/comp-b.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { BasicsComponent } from './basics/basics.component';
     AppComponent,
     testComponent,
     CustomerSignupComponent,
-    BasicsComponent
+    BasicsComponent,
+    CompAComponent,
+    CompBComponent
   ],
   imports: [
     BrowserModule,
