@@ -1,0 +1,65 @@
+<div style="width: 200em" class="container mt-5">
+  <div class="row">
+    <ul class="list-group list-group-flush">
+
+        <!--ngContainer with TemplateRef-->
+        <li class="list-group-item p-4 border-bottom border-info">
+          <div class="row">
+            <h3 class="d-inline-flex">ngContainer with Template</h3>
+            <span>
+               1. Its a angular element which is useful for deploy the template | content.
+               while doing deployment | push  No Additional HTML DOM will be added
+            </span>
+          </div>
+          <div class="row">
+            <span>
+                2. Host | deploy | push | Move Template into Container
+            </span>
+          </div>
+          <div class="row mt-4">
+             <div class="col-4">
+                   <!--Would't create the any addition HTML DOM to the content-->
+
+                  <!-- ng-container has to deploy the ng-template based on the my condition -->
+                 <ng-container  
+                  [ngTemplateOutlet]="CustomerTemplate">
+                 </ng-container>
+                 <!-- Whenever who is going to call(with name) this ngtemplate then only
+                      it will be trigger-->
+                 <ng-template #CustomerTemplate>
+                  <div>
+                   <input
+                   type="text"
+                   class="form-control"
+                   placeholder="CustomerName"
+                   #CustomerName
+                 />
+                  </div>
+                 </ng-template>
+             </div>
+
+             <div class="col-2">
+              <button
+              class="btn btn-primary"
+              (click)="btnGetCustomerTemplate()"
+            >
+              Click
+            </button>
+             </div>
+
+
+             <div class="col-4">
+              <p>
+                You have entered :
+                <span class="font-monospace">
+                {{
+                  displayCustomerTemplate
+                }}
+              </span>
+              </p>
+            </div>
+          </div>
+        </li>
+    </ul>
+  </div>
+</div>

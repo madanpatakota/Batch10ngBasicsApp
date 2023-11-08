@@ -78,6 +78,95 @@ child of the View
           </div>
         </div>
       </li>
+
+      <!--ngContainer-->
+      <li class="list-group-item p-4 border-bottom border-info">
+        <div class="row">
+          <h3 class="d-inline-flex">ngContainer</h3>
+          <span>
+             Its a angular element which is useful for deploy the template.
+             while doing deployment | push  No Additional HTML DOM will be added
+          </span>
+        </div>
+        <div class="row mt-4">
+           <div class="col-4">
+                 <!--Would't create the any addition HTML DOM to the content-->
+               <ng-container 
+                  *ngFor="let item of numbers" 
+                  style="background-color:red;margin:10px">
+                 <p>Hello world {{item}}</p>
+               </ng-container>
+           </div>
+
+           <div class="col-4">
+            <!--HTML Div will be added to the Content-->
+            <div
+              *ngFor="let item of numbers"
+              style="background-color: green; margin: 10px"
+            >
+              <p>Hello world {{ item }}</p>
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+      <!--TemplateRef-->
+      <li class="list-group-item p-4 border-bottom border-info">
+        <div class="row">
+          <h3 class="d-inline-flex">TemplateRef</h3>
+          <span>
+            Which gives the reference of the template in the .ts file
+          </span>
+        </div>
+        <div class="row mt-4">
+          <div class="col-4">
+            <ng-template #CustomerTemplate>
+               <div>
+                <input
+                type="text"
+                class="form-control"
+                placeholder="CustomerName"
+                #CustomerName
+              />
+               </div>
+            </ng-template>
+          </div>
+          <div class="col-2">
+            <button class="btn btn-primary" 
+             (click)="btnGetCustomerTemplate()">
+              Click
+            </button>
+          </div>
+
+          <div class="col-4">
+            <p>
+              You have entered :
+              <span class="font-monospace">{{ displayCustomerTemplate }}</span>
+            </p>
+          </div>
+        </div>
+      </li>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </ul>
   </div>
 </div>

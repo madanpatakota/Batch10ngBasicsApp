@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { BasicsComponent } from './basics/basics.component';
 import { CompAComponent } from './comp-a/comp-a.component';
 import { CompBComponent } from './comp-b/comp-b.component';
+import { CompCComponent } from './comp-c/comp-c.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CompBComponent } from './comp-b/comp-b.component';
     CustomerSignupComponent,
     BasicsComponent,
     CompAComponent,
-    CompBComponent
+    CompBComponent,
+    CompCComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,8 @@
-import { Component, ContentChild, ElementRef, ViewChild } from '@angular/core';
+import { Component,
+   ContentChild,
+    ElementRef, 
+   TemplateRef, 
+    ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-comp-b',
@@ -45,6 +49,27 @@ displayCJOB   = "";
 
 
   }
+
+
+
+  /*ngContainer*/
+  numbers = [1, 2, 3, 4];
+
+
+
+  /*templateRef*/
+  @ViewChild('CustomerTemplate') vCustomerTemplate : TemplateRef<any>;
+  
+  displayCustomerTemplate : TemplateRef<any>;
+  btnGetCustomerTemplate(){
+     var customerTemplateRef = this.vCustomerTemplate;
+     this.displayCustomerTemplate = customerTemplateRef;
+  
+     console.log(this.vCustomerTemplate);
+  }
+
+
+
 
 
 
