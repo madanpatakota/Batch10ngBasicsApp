@@ -4,7 +4,7 @@
         <!--ngContainer with TemplateRef-->
         <li class="list-group-item p-4 border-bottom border-info">
           <div class="row">
-            <h3 class="d-inline-flex">ngContainer with Template</h3>
+            <h6 class="d-inline-flex">ngContainer with Template</h6>
             <span>
                1. Its a angular element which is useful for deploy the template | content.
                while doing deployment | push  No Additional HTML DOM will be added
@@ -36,7 +36,6 @@
                   </div>
                  </ng-template>
              </div>
-
              <div class="col-2">
               <button
               class="btn btn-primary"
@@ -59,6 +58,143 @@
             </div>
           </div>
         </li>
+
+
+        <!--Pass data from container to template-->
+        <li class="list-group-item p-4 border-bottom border-info">
+          <div class="row">
+            <h6 class="d-inline-flex">Pass data from container to template</h6>
+          </div>
+          <div class="row mt-4">
+             <div class="col-4">
+              <!-- 1. how we can pass data from container to template   
+                   A : ngtemplateOutletContext(YOu can pass any kind of value )-->
+                 <ng-container  
+                  [ngTemplateOutlet]="CustomerAmountTemplate"
+                  [ngTemplateOutletContext]="
+                   { CustomerPurchaseAmount : '10000' } " >
+                 </ng-container>
+
+                 <!-- you have to declare the variable by using let keyword--->
+
+                 <!--  abc = "hello"   let-* = ___________ -->
+                 <ng-template #CustomerAmountTemplate    let-CustomerAmount =  "CustomerPurchaseAmount"  >
+                  <div>
+                   <input
+                   type="text"
+                   class="form-control"
+                   placeholder="Customer Amount"
+                   [value]="CustomerAmount"
+                   #CustomerName
+                 />
+                  </div>
+                 </ng-template>
+             </div>
+          </div>
+        </li>
+
+
+        <!--Dynamic template load in ngContainer-->
+        <li class="list-group-item p-4 border-bottom border-info">
+          <div class="row">
+            <h6 class="d-inline-flex">ngContainer with ngTemplate</h6>
+            <span>
+               1. Its a angular element which is useful for deploy the template | content.
+               while doing deployment | push  No Additional HTML DOM will be added
+            </span>
+          </div>
+          <div class="row">
+            <span>
+                2. Host | deploy | push | Move Template into Container
+            </span>
+          </div>
+          <div class="row mt-4">
+             <div class="col-4 mt-3">
+                  
+              <!-- the way of calling of ngtemplate not  by ngtemplateoutlet-->
+                 <ng-container #container >
+                 </ng-container>
+                
+                 <ng-template #CustomerLocationTemplate>
+                  <div>
+                   <input
+                   type="text"
+                   class="form-control"
+                   placeholder="Customer Location"
+                 />
+                  </div>
+                 </ng-template>
+
+                 <ng-template #CustomerAgeTemplate>
+                  <div>
+                   <input
+                   type="text"
+                   class="form-control"
+                   placeholder="Age"
+                 />
+                  </div>
+                 </ng-template>
+
+
+             </div>
+             <div class="col-6 mt-3">
+              <button
+              class="btn btn-primary"
+              (click)="GenerateTemplate()"
+            >
+              Generate template
+            </button>
+
+             </div>
+
+
+            
+          </div>
+        </li>
+
+
+        <!--How to bind the data to the dynamic template-->
+        <li class="list-group-item p-4 border-bottom border-info">
+          <div class="row">
+            <h6 class="d-inline-flex">Bind data to the ngtemplate by ngcontainer(Dynamic)</h6>
+          <div class="row mt-4">
+             <div class="col-4 mt-3">
+                  
+              <!-- the way of calling of ngtemplate not  by ngtemplateoutlet-->
+                 <ng-container #Addresscontainer >
+                 </ng-container>
+
+                 <!-- let-* -->
+                 <ng-template let-adrs = "Address"  #CustomerAddressTemplate>
+                  <div>
+                   <input
+                   type="text"
+                   class="form-control"
+                   placeholder="Customer Adress"
+                   [value]="adrs"
+                 />
+                  </div>
+                 </ng-template>
+
+
+             </div>
+             <div class="col-6 mt-3">
+              <button
+              class="btn btn-primary"
+              (click)="GenerateAdressTemplate()"
+            >
+              Generate Adress template
+            </button>
+
+             </div>
+          </div>
+          </div>
+        </li>
+
+
+
+
+
     </ul>
   </div>
 </div>
